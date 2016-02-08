@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Uni';
+  src: url('fonts/Uni.eot?#iefix') format('embedded-opentype'),  url('fonts/Uni.otf')  format('opentype'),
+	     url('Uni/Uni.woff') format('woff'), url('fonts/Uni.ttf')  format('truetype'), url('fonts/Uni.svg#Uni-Heavy') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bliss';
+  src: url('fonts/Bliss.eot?#iefix') format('embedded-opentype'),  url('fonts/BlissPro.otf')  format('opentype'),
+	     url('fonts/BlissPro.woff') format('woff'), url('fonts/BlissPro.ttf')  format('truetype'), url('fonts/BlissPro.svg#BlissPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{font-family: 'Bliss';font-size: 1.05em;}
