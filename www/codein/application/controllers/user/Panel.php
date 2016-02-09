@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-	
+
 class Panel extends CI_Controller {
 
 
@@ -8,13 +8,12 @@ public function __construct(){
  			$this-> load->helper('form');
 		 	$this->load->library('session');
 }
-	/**
 
-	 */
+
 	public function index()
 	{
+	ob_start();	
 	
-	ob_start();
 	$this->load->model('Singin');
 	$session_id_check = $this->session->userdata('session_id');
 	$key_check= $this->session->userdata('key');
@@ -44,15 +43,15 @@ $row = $query->row_array();
 					{
 					redirect('user/login');
 					}
-				
-		ob_end_flush(); 
+				ob_end_flush(); 
+	
 	
 	}
 	
 	/* Персональный раздел */
 	public function personal()
 	{
-	ob_start();
+	ob_start();	
 	$this->load->model('Singin');
 	$session_id_check = $this->session->userdata('session_id');
 	$key_check= $this->session->userdata('key');
@@ -73,12 +72,14 @@ $row = $query->row_array();
 	$this->load->view('user/personal', $data);
 	}
 	else
-	{redirect('user/login');} ob_end_flush(); 
-
+	{redirect('user/login');} 
+ob_end_flush(); 
 	
 	}
 	
 }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+
+
+/* End of file panel.php */
+/* Location: ./application/controllers/user/Panel.php */

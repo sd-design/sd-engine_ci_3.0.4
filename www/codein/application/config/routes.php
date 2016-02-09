@@ -45,6 +45,7 @@ $route['countdown/(:any)'] = "countdown/view/$1";
 $route['user'] = "user/panel";
 $route['404_override'] = "error404";
 $route['403_override'] = "error403";
+$route['translate_uri_dashes'] = FALSE;
 
 
 

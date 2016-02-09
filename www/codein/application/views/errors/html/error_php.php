@@ -12,7 +12,7 @@
 		<p><a href="<?php echo base_url();?>" class="btn btn-lg btn-info">Начните с главной страницы сайта</a></p>
 		</div>
 
-	<p class="footer"><small>Страница собрана за <strong>{elapsed_time}</strong> секунд</small></p>
+	<p class="footer"><small>Беспокоиться не стоит - слесарь в пути....</small></p>
 	
 		</div>
 

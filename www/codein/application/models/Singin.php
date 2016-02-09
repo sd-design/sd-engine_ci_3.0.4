@@ -41,7 +41,7 @@ $this->load->database();
 				$query2 = $this->db->query("SELECT user_role FROM users WHERE login='$session_login'");
 				$row2 = $query2->row_array();
 				
-				if ($row2['user_role']=== "administrator"){$check=TRUE;return $check;} 
+				if ($row2['user_role'] === "administrator"){$check=TRUE;return $check;} 
 				else{$check=FALSE;return $check; }
 	
 				
