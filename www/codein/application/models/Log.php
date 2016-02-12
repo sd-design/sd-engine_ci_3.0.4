@@ -46,10 +46,13 @@ $newdata = array(
         'key'     => $key,
         'token' => $token
 );
-
+// Добавляем данные в сессию
 $this->session->set_userdata($newdata);
-                
-                
+/*Регистрируем сессию в БД */
+$ip = $_SERVER['REMOTE_ADDR'];
+$time_reg = date("Y-m-d H:i:s");              
+  $sql = "INSERT INTO sd_session (login, session_status, session_i, session_key, time_reg, ip) VALUES(".$this->db->escape($user).",".$this->db->escape(true).",".$this->db->escape($session_id).",".$this->db->escape($key).",".$this->db->escape($time_reg).",".$this->db->escape($ip).")";   
+$this->db->query($sql);              
                 
               
 /*$query_check_user = $this->db->query("SELECT * FROM users WHERE login = ".$this->db->escape($login_check)." and pwd = ".$this->db->escape($pwd_check)."");
@@ -59,7 +62,7 @@ $userdata = $query_check_user->row_array();
 if (@$userdata['login'] == $login_check and @$userdata['pwd'] == $pwd_check) {
 $check= TRUE;
 // Создаем массим с данными сессии
-$ip = $_SERVER['REMOTE_ADDR'];
+
 $session_id = $this->session->userdata('session_i');
 $time_reg = date("Y-m-d H:i:s");
 $key = base64_encode(md5($session_id));
