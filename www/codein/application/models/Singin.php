@@ -8,23 +8,23 @@ public function __construct()
 		
     }
 
-public function check_login($session_id_check,$key_check)
+public function check_login($session_id_check, $key_check, $token_check)
     {
 $this->load->database();
-	$query = $this->db->query("SELECT login, session_status, session_i, session_key FROM sd_session WHERE session_i='$session_id_check'");
+	$query = $this->db->query("SELECT login, session_status, session_i, session_key, token FROM sd_session WHERE session_i='$session_id_check'");
 	$row = $query->row_array();
 	$session_key = $row['session_key'];
-	//echo $session_key."<br/>";
+	$session_token = $row['token'];
 	$session_status = $row['session_status'];
-	
 	$session_i = $row['session_i'];
-if (($key_check === $session_key) and ($session_id_check === $session_i))
+	
+if (($key_check === $session_key) and ($session_id_check === $session_i) and ($token_check === $session_token))
 {$check=TRUE;return $check;}
 else{$check=FALSE;return $check;}
     }
     
     
-    public function check_login_admin($session_id_check,$key_check)
+    public function check_login_admin($session_id_check, $key_check, $token_check)
     {
 $this->load->database();
 	$query = $this->db->query("SELECT login, session_status, session_i, session_key FROM sd_session WHERE session_i='$session_id_check'");

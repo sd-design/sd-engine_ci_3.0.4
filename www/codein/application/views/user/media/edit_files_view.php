@@ -80,7 +80,7 @@
         
     </div>
     <br/>
-	<div class="btn-group" role="group" aria-label="Small button group"><a href="<?php echo base_url();?>user/panel" class="btn btn-info" type="button">панель управления</a></div>
+	<div class="btn-group" role="group" aria-label="Small button group"><a href="<?php echo base_url();?>user/media/filemanager" class="btn btn-warning" type="button">файловый менеджер</a><a href="<?php echo base_url();?>user/panel" class="btn btn-info" type="button">панель управления</a></div>
 </div>
 </div>
 <!-- The blueimp Gallery widget -->

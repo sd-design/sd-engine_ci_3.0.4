@@ -54,7 +54,7 @@
         
   
     <br/>
-	<div class="btn-group" role="group" aria-label="Small button group"><a href="<?php echo base_url();?>user/media/edit_files" class="btn btn-warning" type="button">редактировать файлы</a><a href="<?php echo base_url();?>user/panel" class="btn btn-info" type="button">панель управления</a></div>
+	<div class="btn-group" role="group" aria-label="Small button group"><a href="<?php echo base_url();?>user/media/filemanager" class="btn btn-warning" type="button">файловый менеджер</a><a href="<?php echo base_url();?>user/panel" class="btn btn-info" type="button">панель управления</a></div>
 
   </div>
 

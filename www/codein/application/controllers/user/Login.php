@@ -60,6 +60,8 @@ redirect('user/login');
             	if($check_pwd == true){
 
             	$this->Log->add_keys($login_check);
+            	redirect('user/panel');
+            	/*
             	echo "login and pwd is true";
             	$key = $this->session->userdata('key');
             	echo $key."<br/>";
@@ -68,7 +70,7 @@ redirect('user/login');
             	$user = $this->session->userdata('user');
             	echo $user."<br/>";
             	exit;	
-            	//_______________________________________________________РАЗОБРАТЬСЯ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            	_______________________________________________________РАЗОБРАТЬСЯ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
             	}
 
             	if($check_pwd == FALSE){

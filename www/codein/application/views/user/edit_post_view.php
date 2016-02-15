@@ -11,6 +11,8 @@
 <script src="<?php echo base_url();?>js/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="<?php echo base_url();?>js/bootstrap.min.js"></script>
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+
 </head>
 <body>
 
@@ -89,7 +91,7 @@
 <div class="row">
 <div class="col-sm-12">
 <h5>Текст записи</h5>
-<textarea  name="post_text" rows="22" class="form-control"><?php echo $item->post_text;?></textarea>
+<textarea  name="post_text" rows="22" class="form-control" id="editor1"><?php echo $item->post_text;?></textarea>
 </div>
 </div>
 <br/>

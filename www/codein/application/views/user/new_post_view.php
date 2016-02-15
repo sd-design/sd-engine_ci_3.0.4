@@ -11,6 +11,26 @@
 <script src="<?php echo base_url();?>js/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="<?php echo base_url();?>js/bootstrap.min.js"></script>
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script>
+tinymce.init({
+  selector: 'textarea#editor1',
+  auto_focus: '#editor1',
+  height: 500,
+  plugins: [
+        "advlist autolink lists link image charmap print preview anchor table",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste imagetools"
+    ],
+    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+  imagetools_cors_hosts: ['www.tinymce.com', 'codepen.io'],
+  content_css: [
+    '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
+    '//www.tinymce.com/css/codepen.min.css'
+  ]
+});
+
+</script>
 </head>
 <body>
 
@@ -56,7 +76,7 @@
 <div class="row">
 <div class="col-sm-12">
 <h5>Текст записи</h5>
-<textarea  name="post_text" rows="20" class="form-control"><?php echo set_value('post_text'); ?></textarea>
+<textarea  name="post_text" rows="20" class="form-control" id="editor1"><?php echo set_value('post_text'); ?></textarea>
 </div>
 </div>
 <br/>

@@ -15,18 +15,20 @@
 <body>
 
 <div class="container theme-showcase">
-	<h1>Создание записи</h1>
+	<h3>Вы собираетесь удалить <b><?php echo $what_delete;?></b></h3>
+<div class="row">
+    
+<div class="col-sm-7">
 
-<div class="col-sm-4">
+<div class="alert alert-warning">
 
-
-
-<h5>Запись <b><?php echo $post_name;?></b> создана</h5>
-
-	<br/><a href="<?php echo base_url();?>user/panel" class="btn btn-info">Панель управления</a>
+<h3><small>Описание:</small> <?php echo $delete_descript;?> </h3>
+<h5>если вы хотите совершить это действие нажмите <a href="<?php echo base_url();?>user/yandex/delete_success/<?php echo $delete_id;?>?key=<?php echo $key_log;?>" class="btn btn-danger">удалить</a></h5>
 	</div>
+    	<br/><a href="<?php echo base_url();?>user/panel" class="btn btn-info">панель управления</a>
+    </div>
 
-	
+    </div>	
 </div>
 
 </body>

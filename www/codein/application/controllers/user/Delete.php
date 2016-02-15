@@ -23,9 +23,10 @@ DELETE PART
 public function post($id)
 		{
 								$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+	$key_check = $this->session->userdata('key');
+	$token_check = $this->session->userdata('token');
+	$check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 	if ($check == true){
 		$this->load->database();
@@ -46,9 +47,10 @@ public function post($id)
 public function item($id)
 		{
 								$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+	$key_check = $this->session->userdata('key');
+	$token_check = $this->session->userdata('token');
+	$check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 	if ($check == true){
 		$this->load->database();
@@ -68,9 +70,10 @@ public function item($id)
 public function group($id)
 		{
 								$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+	$key_check = $this->session->userdata('key');
+	$token_check = $this->session->userdata('token');
+	$check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 	if ($check == true){
 		$this->load->database();
@@ -90,9 +93,10 @@ public function group($id)
 public function category($id)
 	{
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 		if ($check == true){
 		$this->load->database();
@@ -112,9 +116,10 @@ public function category($id)
 public function countdown($id)
 		{
 								$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 		if ($check == true){
 		$this->load->database();
 		$query = $this->db->query("SELECT * FROM sd_countdown WHERE ID=".$id." LIMIT 1;");	
@@ -136,9 +141,10 @@ public function countdown($id)
 	{
 
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 		if ($check == true){
 		$this->load->database();

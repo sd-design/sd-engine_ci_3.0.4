@@ -26,7 +26,9 @@
 
 				</div>
 				<div class="panel-body">
-<p><a href="<?php echo base_url();?>user/create/category" class="btn btn-success">создать раздел</a> 
+<p><a href="<?php echo base_url();?>user/create/category" class="btn btn-success">создать раздел</a> (используя url "category")
+</p>
+<p><a href="<?php echo base_url();?>user/create/part" class="btn btn-success">создать раздел</a> (без url "category")
 </p>
 <p><a href="<?php echo base_url();?>user/create/post" class="btn btn-success">создать запись</a> 
 </p>
@@ -35,7 +37,7 @@
 			
 
 <br/>
-<a href="<?php echo base_url();?>user/panel" class="btn btn-info">назад</a>
+<div class="btn-group" role="group" aria-label="Small button group"><a href="<?php echo base_url();?>user/panel" class="btn btn-info">админпанель</a></div>
 				</div>
 			</div>
 </div>

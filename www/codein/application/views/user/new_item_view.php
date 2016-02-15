@@ -77,7 +77,7 @@
 	
 	?>
 	
-	<br/><a href="<?php echo base_url();?>user/panel" class="btn btn-info">назад</a>
+	<br/><div class="btn-group" role="group" aria-label="Small button group"><a href="<?php echo base_url();?>user/create/" class="btn btn-warning">Создать</a><a href="<?php echo base_url();?>user/panel" class="btn btn-info">Панель управления</a></div>
 	</div>
 
 	</div>

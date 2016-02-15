@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Panel SD-ENGINE v2_ci3.0.4</title>
+	<title>Panel SD-ENGINE v1.0.6</title>
 		<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="<?php echo base_url();?>css-back/bootstrap.min.css">
 
@@ -22,7 +22,8 @@
     <div class="well-logo"></div></div>
     sd-engine CMS <b><?php echo $sys_version; ?></b><br/><small><?php echo $panel; ?></small><br/>
     <a href="<?php echo base_url();?>" target="_blank" class="btn btn-warning">перейти на сайт</a><div class="col-md-offset-11">
-    <a href="<?php echo base_url();?>user/logout" class="btn btn-lg btn-danger">выйти</a></div>
+     <div class="checkbox" id="out"><label><input type="checkbox" name="full_out_on" class="full_out"> <small>Выйти везде</small></label></div>
+    <a href="<?php echo base_url();?>user/logout/?full_out_on=off" class="btn btn-lg btn-danger" id="logout">выйти</a></div>
 </div>
 <div class="row">
 										<div class="col-sm-4">
@@ -72,7 +73,7 @@
 			<div class="panel-body">
 <a href="<?php echo base_url();?>user/panel/personal">данные пользователя</a>
 <br/>
-<a href="<?php echo base_url();?>user/logout">выйти</a>
+<a href="<?php echo base_url();?>users/edit">список всех пользователей</a>
 			</div>
 </div>
 																</div>
@@ -189,6 +190,6 @@
 	</div>
     <!-- <a href="<?php echo base_url();?>user/sys_update" class="btn btn-info"><span class="glyphicon glyphicon-refresh">  </span>  проверить обновления</a> -->
 				</div>
-
+<script src="<?php echo base_url();?>js/logout.js"></script>
 </body>
 </html>

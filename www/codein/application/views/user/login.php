@@ -10,7 +10,6 @@
 <link href='<?php echo base_url();?>css-back/style.css' rel='stylesheet' type='text/css'>
 <script src="<?php echo base_url();?>js/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
-<script src="<?php echo base_url();?>js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -22,8 +21,8 @@
 <?php echo form_open('user/login/sign_up'); ?>
 
 <h5>Логин</h5>
-<input type="text" name="login" value="" size="50" class="form-control"/>
-<input type="hidden" name="key-tmp" value="<?php echo $key_gen;?>" size="50" />
+<input type="text" name="login" value="" size="50" class="form-control" autofocus>
+<input type="hidden" name="key-tmp" value="<?php echo $key_gen;?>" size="50">
 <h5>Пароль</h5>
 <input type="password" name="password" value="" size="50" class="form-control"/>
 <br/>

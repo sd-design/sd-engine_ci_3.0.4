@@ -36,13 +36,19 @@
 <input type="text" name="yandex_name" value="<?php echo $item->yandex_name;?>" size="50" class="form-control"/>
 </div>
     </div>
+     <div class="row">
+    <div class="col-sm-3">
+<h4>Год события</h4>
+<input type="text" name="yandex_year" value="<?php echo $item->yandex_year;?>" size="50" class="form-control"/>
+</div>
+    </div>
 <div class="row">
 <div class="col-sm-3">
 <h4>Размер фото *<small>Параметр может быть XXS, XXL, XL, L, M, S</small></h4>
 <input type="text" name="yandex_size" value="<?php echo $item->yandex_size;?>" size="10" class="form-control"/>
     </div></div>
     <div class="row">
-<div class="col-sm-5">
+<div class="col-sm-8">
 <h4>Ссылка на заглавную фотографию альбома *<small></small></h4>
 <input type="text" name="yandex_icon" value="<?php echo $item->yandex_icon;?>" size="70" class="form-control"/>
 </div></div>

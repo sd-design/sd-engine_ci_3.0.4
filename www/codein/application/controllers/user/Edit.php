@@ -18,9 +18,10 @@ EDIT PART
 {
 		ob_start();
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
 		$this->load->view('user/edit_view');
@@ -34,9 +35,10 @@ EDIT PART
 	{
 
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
 		$this->load->database();
@@ -54,9 +56,10 @@ EDIT PART
 	{
 
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 		if ($check == true){
 		$this->load->database();
@@ -73,9 +76,10 @@ EDIT PART
 		public function post($id)
 		{
 								$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
 		$data['alert'] = "";
@@ -99,9 +103,10 @@ EDIT PART
     	public function item($id)
 		{
 								$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
 		$data['alert'] = "";
@@ -124,9 +129,10 @@ EDIT PART
 	public function category($id)
 	{
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
 		$data['alert'] = "";
@@ -150,9 +156,10 @@ EDIT PART
 	{
 
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
 		$this->load->database();
@@ -171,9 +178,10 @@ EDIT PART
 		public function countdown($id)
 		{
 								$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
 		$data['alert'] = "";
@@ -194,9 +202,10 @@ public function items()
 	{
 
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 		if ($check == true){
 		$this->load->database();
@@ -214,9 +223,10 @@ public function items()
 	{
 
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 		if ($check == true){
 		$this->load->database();
@@ -234,9 +244,10 @@ public function items()
 public function group($id)
 		{
     $this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
 		$data['alert'] = "";
@@ -256,9 +267,10 @@ public function ready_delete_group($id)
 	{
 
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 		if ($check == true){
 		$this->load->database();
@@ -280,9 +292,10 @@ public function ready_delete_post($id)
 	{
 
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 		if ($check == true){
 		$this->load->database();
@@ -304,9 +317,10 @@ public function ready_delete_item($id)
 	{
 
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 		if ($check == true){
 		$this->load->database();

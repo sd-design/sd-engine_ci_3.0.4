@@ -42,9 +42,10 @@ UPDATE CATEGORY
 			ob_start();
 			$data['alert']="";
 		$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
 		$category_id = $_POST['category_id'];
@@ -73,9 +74,10 @@ UPDATE COUNTDOWN
 			ob_start();
 			$data['alert']="";
 		$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 	
 				if ($check == true){
@@ -114,9 +116,10 @@ UPDATE POST
 			ob_start();
 			$data['alert']="";
 		$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
                
@@ -165,9 +168,10 @@ public function group()
 			ob_start();
 			$data['alert']="";
 		$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
 		$group_id = $_POST['group_id'];

@@ -22,9 +22,10 @@ public function __construct(){
     {
     ob_start();
       $this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 	if ($check == true){
 		$data['alert'] = "";		
@@ -42,9 +43,10 @@ public function add_album()
      $service = "foto";
     
     $this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 	if ($check == true){
 		$this->load->database();
@@ -65,9 +67,10 @@ public function add_new_album()
      $service = "foto";
     
     $this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 	if ($check == true){
         $data['alert'] = "";
@@ -113,9 +116,10 @@ public function list_albums()
 	{
 
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 		if ($check == true){
 		$this->load->database();
@@ -133,9 +137,10 @@ public function list_albums()
 public function edit($id)
 		{
     $this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
 		$data['alert'] = "";
@@ -154,9 +159,10 @@ public function edit($id)
 public function update_album()
 		{
     $this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
             $yandex_id = $_POST["yandex_id"];        
@@ -187,9 +193,10 @@ public function metrika()
     ob_start();
      $service = "metrika";
     $this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 	if ($check == true){
         $this->load->database();
@@ -210,9 +217,10 @@ public function update()
 		{
     ob_start();
     $this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 	if ($check == true){
             
@@ -256,9 +264,10 @@ ob_end_flush();
 public function ready_delete_albums($id)
 		{
     $this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
 $this->load->database();
@@ -282,9 +291,10 @@ $row = $query->row();
 public function delete($id)   
 {
      $this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
                     
@@ -302,9 +312,10 @@ public function delete($id)
 public function options()
 		{
     $this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+    $key_check = $this->session->userdata('key');
+    $token_check = $this->session->userdata('token');
+    $check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
 		$data['alert'] = "";

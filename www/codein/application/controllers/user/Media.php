@@ -23,9 +23,10 @@ public function __construct(){
 			ob_start();
 			$data['alert']="";
 		$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+	$key_check = $this->session->userdata('key');
+	$token_check = $this->session->userdata('token');
+	$check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	if ($check == true){
 			
 		
@@ -40,9 +41,10 @@ public function __construct(){
 
 		$data['alert']="";
 		$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+	$key_check = $this->session->userdata('key');
+	$token_check = $this->session->userdata('token');
+	$check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	if ($check == true){
 
 
@@ -66,9 +68,10 @@ public function __construct(){
 
 		$data['alert']="";
 		$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+	$key_check = $this->session->userdata('key');
+	$token_check = $this->session->userdata('token');
+	$check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	if ($check == true){
 
 
@@ -81,6 +84,65 @@ public function __construct(){
 	
 	
 	//END list
+		}
+
+
+
+	public function filemanager()
+	{
+	/* раздел файлового менеджера */
+ob_start();
+		$data['alert']="";
+		$this->load->model('Singin');
+	$session_id_check = $this->session->userdata('session_i');
+	$key_check = $this->session->userdata('key');
+	$token_check = $this->session->userdata('token');
+	$check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
+	if ($check == true){
+
+
+      $this->load->view('user/media/filemanager_view', $data);
+
+		}
+		
+		else{redirect('user/panel');}
+	ob_end_flush(); 
+	
+	
+		}
+
+
+public function filer()
+	{
+	/* функция обработки запросов к модели файлового менеджера */
+ob_start();
+		$data['alert']="";
+		$this->load->model('Singin');
+		$this->load->model('File');
+	$session_id_check = $this->session->userdata('session_i');
+	$key_check = $this->session->userdata('key');
+	$token_check = $this->session->userdata('token');
+	$check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
+	if ($check == true){
+
+if($_GET['action'] === "list") {
+
+	$list = $this->File->filelist();
+	echo $list;
+}
+if($_GET['action'] === "home") {
+
+	$list = $this->File->go_home();
+	echo $list;
+	
+    }
+
+		}
+		
+		else{redirect('user/panel');}
+	ob_end_flush(); 
+	
+	
 		}
 
 //END CLASS

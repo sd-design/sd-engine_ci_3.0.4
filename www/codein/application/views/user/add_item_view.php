@@ -23,7 +23,7 @@
 
 <h5>Элемент <b><?php echo $item_name;?></b> создан</h5>
 
-	<br/><a href="<?php echo base_url();?>user/panel" class="btn btn-info">Панель управления</a>
+	<br/><div class="btn-group" role="group" aria-label="Small button group"><a href="<?php echo base_url();?>user/panel" class="btn btn-info">Панель управления</a></div>
 	</div>
 
 	

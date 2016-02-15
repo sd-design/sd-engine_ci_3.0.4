@@ -15,14 +15,15 @@ public function __construct(){
 	ob_start();	
 	
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+	$key_check = $this->session->userdata('key');
+	$token_check = $this->session->userdata('token');
+	$check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 
 						if ($check == true)
 						{	
 $this->load->database();
-$login = $this->session->userdata('login');
+$login = $this->session->userdata('user');
 $query = $this->db->query("SELECT * FROM users WHERE login='$login' LIMIT 1");
 $row = $query->row_array();	
 	if($row['user_role']== "administrator")		{		
@@ -39,7 +40,7 @@ $row = $query->row_array();
 						}
 						
 					}
-					else 
+					if ($check == FALSE)
 					{
 					redirect('user/login');
 					}
@@ -53,13 +54,14 @@ $row = $query->row_array();
 	{
 	ob_start();	
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+	$key_check = $this->session->userdata('key');
+	$token_check = $this->session->userdata('token');
+	$check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
 	$this->load->database();
-	$login = $this->session->userdata('login');
+	$login = $this->session->userdata('user');
 	$query = $this->db->query("SELECT * FROM users WHERE login='$login' LIMIT 1");
 	$row = $query->row_array();
 	$data['login'] = $row['login'];

@@ -18,9 +18,10 @@ EDIT PART
 	{
 		ob_start();
 	$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+	$key_check = $this->session->userdata('key');
+	$token_check = $this->session->userdata('token');
+	$check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 	$data['alert'] = "";
 	
@@ -43,9 +44,10 @@ public function new_user()
 		$role ="";
 	
 		$this->load->model('Singin');
-	$session_id_check = $this->session->userdata('session_id');
-	$key_check= $this->session->userdata('key');
-	$check = $this->Singin->check_login_admin($session_id_check, $key_check);
+	$session_id_check = $this->session->userdata('session_i');
+	$key_check = $this->session->userdata('key');
+	$token_check = $this->session->userdata('token');
+	$check = $this->Singin->check_login($session_id_check, $key_check, $token_check);
 	
 				if ($check == true){
 		 	$this->form_validation->set_rules('login', 'Логин', 'required');

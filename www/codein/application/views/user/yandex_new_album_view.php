@@ -35,13 +35,21 @@
 <input type="text" name="yandex_name" value="<?php echo set_value('yandex_name'); ?>" size="50" class="form-control"/>
 </div>
     </div>
+       <div class="row">
+<div class="col-sm-3">
+<h4>Год события</h4>
+<input type="text" name="yandex_year" value="<?php echo set_value('yandex_year'); ?>" size="50" class="form-control"/>
+</div>
+    </div>
 <div class="row">
 <div class="col-sm-3">
 <h4>Размер фото *<small>Параметр может быть XXS, XXL, XL, L, M, S</small></h4>
 <input type="text" name="yandex_size" value="<?php echo set_value('yandex_size'); ?>" size="50" class="form-control"/>
     </div>
-<div class="col-sm-3">
-<h4>Размер прьевью *<small>Можжет быть XXS, XXL, XL, L, M, S</small></h4>
+    </div>
+    <div class="row">
+<div class="col-sm-8">
+<h4>Иконка альбома *<small>Может быть XXS, XXL, XL, L, M, S</small></h4>
 <input type="text" name="yandex_icon" value="<?php echo set_value('yandex_icon'); ?>" size="50" class="form-control"/>
 </div></div>
 
@@ -75,7 +83,7 @@
 	
 	?>
 	<br/>
-		<div class="btn-group" role="group" aria-label="Small button group"><a href="<?php echo base_url();?>user/yandex/metrika" class="btn btn-warning" type="button">Яндекс-метрика</a> <a href="<?php echo base_url();?>user/panel" class="btn btn-info" type="button">панель управления</a></div>
+		<div class="btn-group" role="group" aria-label="Small button group"><a href="<?php echo base_url();?>user/yandex/metrika" class="btn btn-warning" type="button">Яндек-метрика</a> <a href="<?php echo base_url();?>user/panel" class="btn btn-info" type="button">панель управления</a></div>
 	</div>
 
 	</div>
